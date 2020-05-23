@@ -17,26 +17,26 @@ La durée du vote est uniforme et définie à l'avance.
 L'affichage des pseudos sur les Propositions au moment du vote, ou après le vote, ainsi que la mention d'un score, sont optionnels.
 
 ### Rôles
-- Host
-- Streamer
-- Viewer
+- Host : Streamer qui a rejoint le site en premier
+- Streamer : peut diffuser les questions et les réponses, et vote a la souris sur le site (Son vote vaut 1)
+- Viewer : peut, via le chat Twitch, voter pour la réponse de son choix. 
 
-Le Host est le Streamer qui a rejoint le site en premier, et peut définir les options (petite couronne devant son pseudo).
+Le Host peut définir les options (petite couronne devant son pseudo).
 
-Un Streamer peut diffuser les questions et les réponses (rôle passif)
-
-Un Viewer peut, via le chat Twitch, voter pour la réponse de son choix.
+Si tous les Streamers sont prêts, le jeu démarre immédiatement.
 
 Une fois le jeu lancé, tous les Streamers voient les réponses et les votes au même moment - s'ils actualisent la page ou quittent/reviennent, ils voient tous la même chose.
 
-Lorsque suffisamment de Streamers sont "Ready", une alerte sonne et un chronomètre démarre avant que le jeu ne se lance.
+Le vote des Viewers est comptabilisé séparément du vote des Streamers (50% Streamers - 50% Viewers). Par exemple, s'il y a 7 Streamers, le vote du public peut apporter jusqu'à 7 points.
 
-Si tous les Streamers sont prêts, le jeu démarre immédiatement.
+Lorsque le vote est terminé, il y a une animation de victoire ainsi qu'un effet sonore.
+
+A la fin d'un Duel, c'est le Host qui décide de lancer le Duel suivant en cliquant sur "NEXT".
 
 ## Vues
 
 - Accueil - Montre une liste des Streamers connectés, ainsi qu'une liste d'options :
-    - Durée du vote en secondes
+    - Durée du vote en secondes (par défaut 120)
     - Affichage des pseudos avant le vote
     - Affichage des scores
     - Un bouton "Ready" qui active ou désactive l'etat "Ready" d'un Streamer.
@@ -59,4 +59,4 @@ Types de score :
 
 Le Streamer qui a le plus haut score par Duel gagne la partie.
 
-Le Streamer qui a le plus de votes obtient une mention honorable "le plus aimé du public".
+Le Streamer qui a le plus de votes de Viewers obtient une mention honorable "le plus aimé du public".
