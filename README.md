@@ -3,7 +3,7 @@
 ## Description du projet (en version Alpha)
 
 ### Choix des langages
-BackEnd C++, DBMS PostreSQL, FrontEnd JS
+BackEnd C++, DBMS PostgreSQL, FrontEnd JS
 
 ### Description
 Le but est de créer une application de duel entre amis, où le vainqueur est designé par vote du public (Integration Chat Twitch)
