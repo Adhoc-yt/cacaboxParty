@@ -39,7 +39,7 @@ A la fin d'un Duel, c'est le Host qui décide de lancer le Duel suivant en cliqu
     - Durée du vote en secondes (par défaut 120)
     - Affichage des pseudos avant le vote
     - Affichage des scores
-    - Un bouton "Ready" qui active ou désactive l'etat "Ready" d'un Streamer.
+    - Un bouton "Ready" qui active ou désactive l'état "Ready" d'un Streamer
 
 - Duel - Montre le Thème du Duel en haut, montre la première Proposition, puis la seconde, puis oppose les deux, separées par une animation d'éclair/VS/explosion/etc. Ensuite, le vote demarre, et les votes sont affichés en direct sur une "Barre de vie" en bas.
 
