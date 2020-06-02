@@ -1,7 +1,7 @@
-#include <iostream>
 #include <fstream>
 #include <unordered_map>
 #include "database_connector.h"
+#include "logger.h"
 
 database_connector::database_connector() : database_connector("db.conf"){}
 
@@ -20,5 +20,13 @@ database_connector::database_connector(std::filesystem::path config_file_path){
 
     ifs.close();
  
-    std::cout << map["database"] << std::endl ;
+    db_connection_ = std::make_unique<pqxx::connection>(fmt::format("postgresql://{}:{}@{}:{}/{}", 
+                                                        map["dbuser"], 
+                                                        map["dbpassword"], 
+                                                        map["host"], 
+                                                        map["port"], 
+                                                        map["database"]));
+
+    pqxx::work txn(*db_connection_);
+    
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "database_connector.h"
+#include "logger.h"
 /* TODO: Connect to DB and test CRUD */
 
 int main(int argc, char** argv) {
@@ -13,6 +14,7 @@ int main(int argc, char** argv) {
         read
         exit
     */
+    logger::error("texte ici");
     database_connector dbc;
     return 0;
 }
