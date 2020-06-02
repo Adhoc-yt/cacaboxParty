@@ -14,7 +14,8 @@ int main(int argc, char** argv) {
         read
         exit
     */
-    logger::error("texte ici");
+    logger::info("debut pgm");
     database_connector dbc;
+    logger::info("fin pgm");
     return 0;
 }
