@@ -13,4 +13,14 @@ class database_connector {
         database_connector();
         explicit database_connector(std::filesystem::path config_file);
         bool insert_values(std::string_view table, std::vector<std::string_view> values);
+
+        template <typename... Ts>
+        auto query(std::string_view query_str) {
+            pqxx::work w{*db_connection_};
+            return w.stream<Ts...>(query_str);
+        }
+
+        //for (const auto& val : db.query<int, std::string>("SELECT blabal")) {
+            //do things
+        //}
 };

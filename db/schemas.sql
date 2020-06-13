@@ -8,6 +8,14 @@ CREATE TABLE Streamer (
     son_victoire TEXT,
     son_defaite TEXT
 );
+/* INSERT INTO Streamer(id_twitch, nom_affiche, avatar, son_victoire, son_defaite)
+ VALUES (
+    1234,
+    'Supercon',
+    'serveur/dossier/supercon.jpg',
+    'serveur/dossier/youjustgotassaded.mp3',
+    'serveur/dossier/supercon_loser.wav'
+    ); */
 
 CREATE TABLE Duel (
     id_duel SERIAL PRIMARY KEY,

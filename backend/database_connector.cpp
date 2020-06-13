@@ -9,7 +9,8 @@ database_connector::database_connector(std::filesystem::path config_file_path){
     std::ifstream ifs;
     ifs.open(config_file_path); 
     if (!ifs.is_open()) {
-       throw std::runtime_error{std::string{"Failed to open "} + config_file_path.c_str()};
+        logger::error("Could not open database config file");
+        throw std::runtime_error{std::string{"Failed to open "} + config_file_path.c_str()};
     }
 
     std::unordered_map<std::string, std::string> map;
@@ -30,3 +31,4 @@ database_connector::database_connector(std::filesystem::path config_file_path){
     pqxx::work txn(*db_connection_);
     
 }
+
