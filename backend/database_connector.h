@@ -16,7 +16,9 @@ class database_connector {
 
         template <typename... Ts>
         auto query(std::string_view query_str) {
+            logger::info("query: " + query_str);
             pqxx::work w{*db_connection_};
+            logger::info("worker time");
             return w.stream<Ts...>(query_str);
         }
 

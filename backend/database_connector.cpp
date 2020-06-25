@@ -28,7 +28,7 @@ database_connector::database_connector(std::filesystem::path config_file_path){
                                                         map["port"], 
                                                         map["database"]));
 
-    pqxx::work txn(*db_connection_);
+    logger::info("Fin init DB connection");
     
 }
 
